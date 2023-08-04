@@ -9,3 +9,5 @@ As a Business Management Intern at TRUMPF North America, I implemented this auto
 7. Drafting an email with order and tracking information.
 8. Adding the appropriate recipients, which varies by laser type and whether we are selling directly to an end user or to a distributor.
 9. Organizing the inbox.
+
+The code is split up into five modules. The outlook module is for connecting to outlook, getting email objects, moving emails around folders, and drafting the email. The sharepoint module is for connecting to sharepoint, updating the sharepoint item with tracking information, and reading data from that item. The tracking module is for getting serial numbers, tracking numbers, and tracking links. The utils module is for saving temporary files and reading pdfs. The process flow is in the main module.
