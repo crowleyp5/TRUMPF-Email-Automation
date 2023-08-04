@@ -39,7 +39,7 @@ def to_holding_box(outlook_app, email, carrier):
     # tracking email sent. This could be due to incoterms, project status, or
     # that we have not yet received a tracking number from the carrier
     namespace = outlook_app.GetNamespace("MAPI")
-    email_account = "PO_submittal@us.TRUMPF.com"
+    email_account = "************"
     inbox = namespace.GetSharedDefaultFolder(namespace.CreateRecipient(email_account), 6)
     if carrier == []:
         return
@@ -62,7 +62,7 @@ def to_sharepoint(outlook_app, email, carrier):
     # here after a tracking email has been sent for the laser to which the email
     # pertains.
     namespace = outlook_app.GetNamespace("MAPI")
-    email_account = "PO_submittal@us.TRUMPF.com"
+    email_account = "***************"
     inbox = namespace.GetSharedDefaultFolder(namespace.CreateRecipient(email_account), 6)
     if carrier == []:
         return
@@ -84,7 +84,7 @@ def get_emails(outlook_app):
     namespace = outlook_app.GetNamespace("MAPI")
 
     # Get Inbox folder for purchase order submittals
-    email_account = "PO_submittal@us.TRUMPF.com"
+    email_account = "*************"
     inbox = namespace.GetSharedDefaultFolder(namespace.CreateRecipient(email_account), 6)
 
     # Create time restriction
@@ -111,7 +111,7 @@ def get_emails(outlook_app):
 
 def draft_email(outlook_app, po, so, equipment_number, recipients, cc_recipients, customer_name, link, carrier):
     # We set the path to our external signature, so it can be added at the end of the email body
-    signature_path = "C:\Users\crowleypa\AppData\Roaming\Microsoft\Signatures\extern (english).htm"
+    signature_path = "***************************"
     # We create a descriptive subject line
     subject = "Shipment notice for PO # " + po + "; Machine S/N # " + equipment_number + "; SO # " + so
     # Set display text for the hyperlink
@@ -148,7 +148,7 @@ def find_machine_tools(outlook_app, emails):
     # This is not our responsibility. We move those to 
     # the machine tools folder
     namespace = outlook_app.GetNamespace("MAPI")
-    email_account = "PO_submittal@us.TRUMPF.com"
+    email_account = "*************************"
     inbox = namespace.GetSharedDefaultFolder(namespace.CreateRecipient(email_account), 6)
 
     # Find machine tools
